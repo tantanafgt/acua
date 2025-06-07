@@ -23,3 +23,18 @@ document.querySelector('.back-to-top').addEventListener('click', (e) => {
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// Hide hamburger at top on scroll (desktop only)
+window.addEventListener('scroll', () => {
+  const top = window.scrollY === 0;
+  if (window.innerWidth >= 768) {
+    hamburger.classList.toggle('hide', top);
+  } else {
+    hamburger.classList.remove('hide');
+  }
+});
+
+// Initial check for top position on load (desktop only)
+if (window.scrollY === 0 && window.innerWidth >= 768) {
+  hamburger.classList.add('hide');
+}

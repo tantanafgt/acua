@@ -65,7 +65,7 @@ nav ul {
   top: 0;
   right: 0;
   background: #fff;
-  width: 60%;
+  width: 40%;
   height: 100%;
   padding-top: 60px;
   z-index: 998;
@@ -119,14 +119,14 @@ section {
 }
 
 .photo-scroll {
+  display: flex;
   overflow: hidden;
-  width: 100%;
 }
 
 .photo-track {
   display: flex;
   width: calc(200px * 10);
-  animation: scroll 20s linear infinite;
+  animation: loop-list 50s linear infinite;
 }
 
 .photo-box {
@@ -139,6 +139,19 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes loop-list {
+    from {
+        transform: translateX(0);
+    }
+    to {
+		transform: translateX(-100%);
+    }
+}
+
+.photo-scroll:hover .photo-track {
+    animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -168,4 +181,45 @@ th, td {
   border: 1px solid #aaa;
   padding: 10px;
   text-align: left;
+}
+
+/* Hide hamburger when class 'hide' is added */
+.hamburger.hide {
+  display: none !important;
+}
+
+/* Desktop navigation menu styling */
+.desktop-nav {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.desktop-nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.desktop-nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+.desktop-nav li img.sns-icon {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+/* Show desktop nav only on larger screens */
+@media screen and (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  nav ul {
+  width: 20%
+  }
 }
