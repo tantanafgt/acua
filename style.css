@@ -60,7 +60,7 @@ nav {
 
 nav ul {
   list-style: none;
-  display: none;
+  display: block;
   position: fixed;
   top: 0;
   right: 0;
@@ -69,10 +69,12 @@ nav ul {
   height: 100%;
   padding-top: 60px;
   z-index: 998;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
 }
 
 nav ul.show {
-  display: block;
+  transform: translateX(0);
 }
 
 nav ul li {
@@ -84,6 +86,25 @@ nav ul li a {
   text-decoration: none;
   color: #333;
   font-size: 1.2rem;
+}
+
+/* SNS icon placeholders */
+nav ul li a[href*="instagram"],
+nav ul li a[href*="line"] {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: -9999px;
+}
+
+nav ul li a[href*="instagram"] {
+  background-image: url('icon_instagram.png');
+}
+
+nav ul li a[href*="line"] {
+  background-image: url('icon_line.png');
 }
 
 .container {
