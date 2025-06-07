@@ -1,26 +1,25 @@
-// Toggle mobile menu
-const toggleBtn = document.querySelector('.menu-toggle');
-const mobileNav = document.querySelector('.mobile-nav');
-const mobileLinks = document.querySelectorAll('.mobile-nav a');
 
-toggleBtn.addEventListener('click', () => {
-  toggleBtn.classList.toggle('open');
-  mobileNav.classList.toggle('open');
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  menu.classList.toggle("show");
 });
 
-// Close menu on link click
-mobileLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    toggleBtn.classList.remove('open');
-    mobileNav.classList.remove('open');
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+    menu.classList.remove("show");
+    hamburger.classList.remove("active");
   });
 });
 
-// Smooth scroll for back to top
 document.querySelector('.back-to-top').addEventListener('click', (e) => {
   e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
