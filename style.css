@@ -13,11 +13,13 @@ body {
   scroll-behavior: smooth;
 }
 
+
 header {
   background: #b0e0e6;
-  padding: 10px 20px;
+  padding: 6px 16px;
   position: relative;
 }
+
 
 .logo {
   font-size: 1.5rem;
@@ -29,6 +31,7 @@ nav {
 }
 
 .hamburger {
+  z-index: 1001;
   cursor: pointer;
   position: fixed;
   top: 10px;
@@ -42,8 +45,8 @@ nav {
 }
 
 .hamburger span {
-  height: 4px;
-  background: #002b40;
+  height: 10px;
+  background: #f8a5c2;
   border-radius: 2px;
   transition: 0.4s;
 }
@@ -160,10 +163,12 @@ section {
 }
 
 footer {
-  background: #b0e0e6;
+  background: linear-gradient(to top, rgba(176, 224, 230, 0.8), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(6px);
   padding: 20px;
   text-align: center;
- position: relative;}
+  position: relative;
+}
 
 .back-to-top {
   display: block;
@@ -202,8 +207,18 @@ th, td {
 }
 
 .desktop-nav li a {
-  color: white;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  min-width: 120px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  color: #002b40;
   text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .desktop-nav li img.sns-icon {
@@ -227,16 +242,18 @@ th, td {
 
 /* Header navigation button style (PC) */
 .desktop-nav li a {
-  display: inline-block;
-  padding: 0.4em 1em;
-  background-color: #72bcd4; /* slightly darker than main blue */
-  color: white;
-  border: 2px dotted #ffffff; /* dotted border for polka-dot feel */
-  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  min-width: 120px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  color: #002b40;
   text-decoration: none;
   font-weight: bold;
-  font-size: 0.95rem;
-  transition: background 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
 }
 
 .desktop-nav li a:hover {
@@ -247,7 +264,7 @@ th, td {
 .hamburger span {
   width: 10px;
   height: 10px;
-  background: #002b40;
+  background: #f8a5c2;
   border-radius: 50%;
 }
 
@@ -493,9 +510,19 @@ nav ul li a,
   }
 
   .desktop-nav li a {
-    min-width: 150px;
-    text-align: center;
-  }
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  min-width: 120px;
+  background-color: rgba(255,255,255,0.4);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  color: #002b40;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
 }
 
 /* Hamburger menu spacing fix for smaller screens */
@@ -634,4 +661,158 @@ nav ul li a:hover {
     overflow-y: auto;
     padding-bottom: 2rem;
   }
+}
+
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 43, 64, 0.85), rgba(75, 182, 212, 0.85));
+  color: white;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  backdrop-filter: blur(6px);
+}
+
+
+.top-bar-btn {
+  color: white;
+  text-decoration: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.1);
+  transition: background 0.3s ease;
+}
+
+.top-bar-btn:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+.insta-btn {
+  background-color: #E4405F;
+}
+.insta-btn:hover {
+  background-color: #d52a4e;
+}
+
+.line-btn {
+  background-color: #00C300;
+}
+.line-btn:hover {
+  background-color: #00a800;
+}
+
+/* Force override: pink hamburger dots */
+.hamburger span {
+  background: #ff69b4 !important; /* pink */
+}
+
+@media screen and (min-width: 768px) {
+  
+}
+
+@media screen and (min-width: 768px) {
+  .desktop-nav {
+    padding: 4px 10px;
+  }
+  .desktop-nav li a {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+  }
+}
+
+/* 強調ピンクのドットに変更 & サイズ調整 */
+.hamburger span {
+  width: 12px !important;
+  height: 12px !important;
+  background: #ff69b4 !important;
+  border-radius: 50%;
+  display: block;
+}
+
+/* PC表示時のナビゲーション幅制限と中央寄せ */
+@media screen and (min-width: 768px) {
+  .desktop-nav {
+    max-width: 960px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+}
+
+
+/* --- Top bar height adjustment --- */
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, rgba(0, 43, 64, 0.85), rgba(75, 182, 212, 0.85));
+  color: white;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  backdrop-filter: blur(6px);
+}
+
+
+/* --- Hamburger fixed in top bar with background --- */
+.hamburger-wrapper {
+  position: fixed;
+  top: 4px;
+  right: 8px;
+  z-index: 1002;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 6px;
+  backdrop-filter: blur(6px);
+}
+
+/* --- Ensure mobile nav menu scrolls fully --- */
+nav ul {
+  height: 100vh !important;
+  overflow-y: auto !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Header padding for compact height */
+
+header {
+  background: #b0e0e6;
+  padding: 6px 16px;
+  position: relative;
+}
+
+
+/* Smaller desktop nav links */
+.desktop-nav li a {
+  padding: 4px 8px;
+  font-size: 0.85rem;
+}
+
+/* Fix hamburger position and style */
+.hamburger-wrapper {
+  position: absolute;
+  top: 4px;
+  right: 10px;
+  z-index: 1002;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 4px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+
+/* Ensure mobile menu scrolls fully */
+nav ul {
+  height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 3rem;
 }
