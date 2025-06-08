@@ -43,7 +43,7 @@ nav {
 
 .hamburger span {
   height: 4px;
-  background: #333;
+  background: #002b40;
   border-radius: 2px;
   transition: 0.4s;
 }
@@ -247,7 +247,7 @@ th, td {
 .hamburger span {
   width: 10px;
   height: 10px;
-  background: #555;
+  background: #002b40;
   border-radius: 50%;
 }
 
@@ -337,4 +337,174 @@ nav ul li a:hover {
 .back-to-top {
   color: #2d9cdb;
   font-weight: bold;
+}
+
+
+/* Modern translucent hamburger menu background */
+
+
+
+/* Back-to-top button styling */
+.back-to-top {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: rgba(75, 182, 212, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: #002b40;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+.back-to-top:hover {
+  background-color: rgba(75, 182, 212, 0.5);
+  transform: translateY(-2px);
+}
+.back-to-top .triangle {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+/* Reinforce smooth transitions */
+button, a, .photo-box, nav ul li a {
+  transition: all 0.3s ease;
+}
+
+
+
+}
+
+
+
+}
+
+/* Animate elements on load */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+nav ul {
+  background-color: rgba(75, 182, 212, 0.3) !important;
+  backdrop-filter: blur(8px) !important;
+  width: 60% !important;
+  height: 100% !important;
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  transform: translateX(100%) !important;
+  transition: transform 0.3s ease !important;
+  z-index: 998 !important;
+  padding-top: 60px !important;
+}
+
+nav ul.show {
+  transform: translateX(0) !important;
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  color: #002b40;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.back-to-top .triangle {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+  vertical-align: middle;
+}
+
+nav ul li {
+  padding: 8px 0;
+}
+
+/* Ensure all header and nav buttons have same size */
+.desktop-nav li a,
+nav ul li a,
+.back-to-top {
+  width: 200px;
+  text-align: center;
+}
+
+/* Wrap desktop nav buttons if too wide */
+@media screen and (min-width: 768px) {
+  .desktop-nav {
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 10px;
+  }
+}
+
+
+/* Unified button size for wrapping and max fit */
+.desktop-nav li a,
+nav ul li a,
+.back-to-top {
+  width: fit-content;
+  max-width: 100%;
+  min-width: 160px;
+  text-align: center;
+}
+
+/* Hamburger menu fixed width for PC */
+@media screen and (min-width: 768px) {
+  nav ul {
+    width: 240px !important;
+  }
+}
+
+
+/* Wrap and align desktop nav items */
+@media screen and (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0 10px;
+  }
+}
+
+/* Ensure hamburger menu fits viewport */
+@media screen and (max-width: 767px) {
+  nav ul {
+    overflow-y: auto;
+    max-height: 100vh;
+    padding-bottom: 2rem;
+  }
+
+  nav ul li {
+    padding: 8px 0;
+  }
 }
