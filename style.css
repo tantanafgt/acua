@@ -100,11 +100,11 @@ nav ul li a[href*="line"] {
 }
 
 nav ul li a[href*="instagram"] {
-  background-image: url('icon_instagram.png');
+  background-image: url('images/icon_instagram.png');
 }
 
 nav ul li a[href*="line"] {
-  background-image: url('icon_line.png');
+  background-image: url('images/icon_line.png');
 }
 
 .container {
@@ -163,7 +163,7 @@ footer {
   background: #b0e0e6;
   padding: 20px;
   text-align: center;
-}
+ position: relative;}
 
 .back-to-top {
   display: block;
@@ -309,7 +309,7 @@ nav ul li a {
   display: inline-block;
   margin: 10px;
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(6px);
   color: #002b40;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -320,7 +320,7 @@ nav ul li a {
 }
 .desktop-nav li a:hover,
 nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
 }
 
@@ -375,13 +375,6 @@ button, a, .photo-box, nav ul li a {
 }
 
 
-
-}
-
-
-
-}
-
 /* Animate elements on load */
 .fade-in {
   opacity: 0;
@@ -422,7 +415,7 @@ nav ul.show {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(6px);
   color: #002b40;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -435,7 +428,7 @@ nav ul.show {
 }
 
 .back-to-top:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
   transform: scale(1.05);
 }
 
@@ -520,5 +513,125 @@ nav ul li a,
   nav ul li a {
     font-size: 1rem;
     padding: 8px 16px;
+  }
+}
+
+.footer-sns {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.footer-sns a {
+  margin-left: 10px;
+}
+.footer-sns img.sns-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+
+.footer-sns-alt {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-sns-alt a {
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #002b40;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-sns-alt a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* Stylish SNS button links in footer */
+.footer-sns-alt {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 12px;
+}
+
+.footer-sns-alt a {
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #002b40;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.footer-sns-alt a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+/* Modern hamburger menu font and color styling */
+nav ul li a {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  color: #002b40;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 767px) {
+  .footer-sns-alt {
+    position: static;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+.footer-sns-alt .instagram-btn {
+  background-color: #E4405F;
+  color: #fff;
+}
+.footer-sns-alt .instagram-btn:hover {
+  background-color: #d52a4e;
+}
+
+.footer-sns-alt .line-btn {
+  background-color: #00C300;
+  color: #fff;
+}
+.footer-sns-alt .line-btn:hover {
+  background-color: #00a800;
+}
+
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 2rem;
   }
 }
