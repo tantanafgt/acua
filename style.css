@@ -208,7 +208,7 @@ th, td {
 
 .desktop-nav li a {
   padding: 6px 12px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   min-width: 120px;
   background-color: rgba(255,255,255,0.4);
   border-radius: 12px;
@@ -243,7 +243,7 @@ th, td {
 /* Header navigation button style (PC) */
 .desktop-nav li a {
   padding: 6px 12px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   min-width: 120px;
   background-color: rgba(255,255,255,0.4);
   border-radius: 12px;
@@ -511,7 +511,7 @@ nav ul li a,
 
   .desktop-nav li a {
   padding: 6px 12px;
-  font-size: 0.85rem;
+  font-size: 1rem;
   min-width: 120px;
   background-color: rgba(255,255,255,0.4);
   border-radius: 12px;
@@ -664,6 +664,7 @@ nav ul li a:hover {
 }
 
 
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -674,21 +675,25 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 16px;
-  padding: 4px 12px;
-  font-size: 0.8rem;
+  padding: 8px 16px;
+  font-size: 1rem;
   backdrop-filter: blur(6px);
 }
+
+
 
 
 .top-bar-btn {
   color: white;
   text-decoration: none;
-  padding: 4px 8px;
+  padding: 6px 12px;
   border-radius: 6px;
   font-weight: bold;
   background-color: rgba(255,255,255,0.1);
   transition: background 0.3s ease;
+  font-size: 0.9rem;
 }
+
 
 .top-bar-btn:hover {
   background-color: rgba(255,255,255,0.3);
@@ -723,7 +728,7 @@ nav ul li a:hover {
   }
   .desktop-nav li a {
     padding: 4px 8px;
-    font-size: 0.85rem;
+    font-size: 1rem;
   }
 }
 
@@ -748,6 +753,7 @@ nav ul li a:hover {
 
 /* --- Top bar height adjustment --- */
 
+
 .top-bar {
   position: fixed;
   top: 0;
@@ -758,10 +764,11 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 16px;
-  padding: 4px 12px;
-  font-size: 0.8rem;
+  padding: 8px 16px;
+  font-size: 1rem;
   backdrop-filter: blur(6px);
 }
+
 
 
 /* --- Hamburger fixed in top bar with background --- */
@@ -795,7 +802,7 @@ header {
 /* Smaller desktop nav links */
 .desktop-nav li a {
   padding: 4px 8px;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 /* Fix hamburger position and style */
@@ -815,4 +822,43 @@ nav ul {
   height: 100vh;
   overflow-y: auto;
   padding-bottom: 3rem;
+}
+
+/* New hamburger icon style */
+.hamburger-icon {
+  font-size: 28px;
+  color: #ff69b4;
+  cursor: pointer;
+  z-index: 1001;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 6px 10px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.4);
+  transition: background 0.3s ease;
+}
+.hamburger-icon:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Adjusted hamburger icon inside top-bar */
+.hamburger-icon {
+  font-size: 24px;
+  color: #ff69b4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 248, 255, 0.25); /* soft blue */
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(200, 200, 255, 0.4);
+  transition: background 0.3s ease;
+  position: static;
+}
+.hamburger-icon:hover {
+  background-color: rgba(240, 248, 255, 0.4);
 }
