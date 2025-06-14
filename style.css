@@ -38,7 +38,7 @@ nav ul {
   top: 0;
   right: 0;
   background: linear-gradient(to top, rgba(176, 224, 230, 0.9), rgba(255, 255, 255, 0.9));
-  width: 40%;
+  width: 60%;
   height: 100%;
   padding-top: 60px;
   z-index: 998;
@@ -61,35 +61,6 @@ nav ul li a {
   font-size: 1.2rem;
 }
 
-/* SNS icon placeholders */
-nav ul li a[href*="instagram"],
-nav ul li a[href*="line"] {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-indent: -9999px;
-}
-
-nav ul li a[href*="instagram"] {
-  background-image: url('images/icon_instagram.png');
-}
-
-nav ul li a[href*="line"] {
-  background-image: url('images/icon_line.png');
-}
-
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1rem;
-  width: 100%;
-}
-
-section {
-  margin: 40px 0;
-}
 
 .photo-scroll {
   display: flex;
@@ -349,8 +320,7 @@ nav ul li a,
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to right, rgba(0, 43, 64, 0.85), rgba(91, 178, 202, 0.795));
-  color: white;
+  color: rgb(192, 252, 255);
   z-index: 999;
   display: flex;
   justify-content: center;
@@ -362,12 +332,12 @@ nav ul li a,
 
 
 .top-bar-btn {
-  color: white;
+  color: rgb(66, 201, 242);
   text-decoration: none;
   padding: 0px 10px;
   border-radius: 6px;
   font-weight: bold;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(66, 201, 242, 0.1);
   transition: background 0.3s ease;
   font-size: 1.2rem;
   border: 1px solid rgba(200, 200, 255, 0.4);
@@ -390,7 +360,7 @@ nav ul li a,
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(240, 248, 255, 0.25); /* soft blue */
+  background-color: rgba(66, 201, 242, 0.1); /* soft blue */
   padding: 0px 10px;
   border-radius: 10px;
   border: 1px solid rgba(200, 200, 255, 0.4);
