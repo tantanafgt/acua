@@ -15,7 +15,7 @@ body {
 
 
 header {
-  background: #b0e0e6;
+  background: linear-gradient(to top left, rgba(176, 224, 230, 0.9), rgba(255, 255, 255, 0.9));
   padding: 6px 16px;
   position: relative;
 }
@@ -30,36 +30,6 @@ nav {
   position: relative;
 }
 
-.hamburger {
-  z-index: 1001;
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
-}
-
-.hamburger span {
-  height: 10px;
-  background: #f8a5c2;
-  border-radius: 2px;
-  transition: 0.4s;
-}
-
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
-}
 
 nav ul {
   list-style: none;
@@ -67,7 +37,7 @@ nav ul {
   position: fixed;
   top: 0;
   right: 0;
-  background: #fff;
+  background: linear-gradient(to top, rgba(176, 224, 230, 0.9), rgba(255, 255, 255, 0.9));
   width: 40%;
   height: 100%;
   padding-top: 60px;
@@ -128,13 +98,13 @@ section {
 
 .photo-track {
   display: flex;
-  width: calc(200px * 10);
-  animation: loop-list 50s linear infinite;
+  width: calc(600px * 12);
+  animation: loop-list 80s linear infinite;
 }
 
 .photo-box {
-  width: 200px;
-  height: 150px;
+  width: 600px;
+  height: 450px;
   background: #fff0f5;
   border: 1px solid #ccc;
   margin-right: 10px;
@@ -170,13 +140,6 @@ footer {
   position: relative;
 }
 
-.back-to-top {
-  display: block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #fff;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -188,10 +151,6 @@ th, td {
   text-align: left;
 }
 
-/* Hide hamburger when class 'hide' is added */
-.hamburger.hide {
-  display: none !important;
-}
 
 /* Desktop navigation menu styling */
 .desktop-nav {
@@ -206,26 +165,6 @@ th, td {
   margin-left: 20px;
 }
 
-.desktop-nav li a {
-  padding: 6px 12px;
-  font-size: 1rem;
-  min-width: 120px;
-  background-color: rgba(255,255,255,0.4);
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(6px);
-  color: #002b40;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-
-.desktop-nav li img.sns-icon {
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-}
 
 /* Show desktop nav only on larger screens */
 @media screen and (min-width: 768px) {
@@ -233,58 +172,14 @@ th, td {
     display: flex;
     align-items: center;
     margin-left: auto;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+    overflow-y: auto;
   }
   nav ul {
   width: 20%
   }
-}
-
-
-/* Header navigation button style (PC) */
-.desktop-nav li a {
-  padding: 6px 12px;
-  font-size: 1rem;
-  min-width: 120px;
-  background-color: rgba(255,255,255,0.4);
-  border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(6px);
-  color: #002b40;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-}
-
-.desktop-nav li a:hover {
-  background-color: #5bb0ca;
-}
-
-/* Cute hamburger as 3 dots */
-.hamburger span {
-  width: 10px;
-  height: 10px;
-  background: #f8a5c2;
-  border-radius: 50%;
-}
-
-/* Mobile menu items (hamburger menu opened) */
-nav ul li a {
-  display: block;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background-color: #a4d8e3;
-  color: #333;
-  text-align: center;
-  border: 2px dashed white;
-  border-radius: 16px;
-  width: 80%;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: #89c9d7;
 }
 
 
@@ -350,42 +245,6 @@ nav ul li a:hover {
   transform: scale(1.05);
 }
 
-/* Smooth scroll back to top button */
-.back-to-top {
-  color: #2d9cdb;
-  font-weight: bold;
-}
-
-
-/* Modern translucent hamburger menu background */
-
-
-
-/* Back-to-top button styling */
-.back-to-top {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 16px;
-  background-color: rgba(75, 182, 212, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  color: #002b40;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  backdrop-filter: blur(6px);
-  transition: all 0.3s ease;
-}
-.back-to-top:hover {
-  background-color: rgba(75, 182, 212, 0.5);
-  transform: translateY(-2px);
-}
-.back-to-top .triangle {
-  margin-right: 0.5em;
-  font-size: 1.2em;
-  vertical-align: middle;
-}
-
 /* Reinforce smooth transitions */
 button, a, .photo-box, nav ul li a {
   transition: all 0.3s ease;
@@ -404,24 +263,6 @@ button, a, .photo-box, nav ul li a {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-
-
-
-
-nav ul {
-  background-color: rgba(75, 182, 212, 0.3) !important;
-  backdrop-filter: blur(8px) !important;
-  width: 60% !important;
-  height: 100% !important;
-  position: fixed !important;
-  top: 0 !important;
-  right: 0 !important;
-  transform: translateX(100%) !important;
-  transition: transform 0.3s ease !important;
-  z-index: 998 !important;
-  padding-top: 60px !important;
 }
 
 nav ul.show {
@@ -455,26 +296,6 @@ nav ul.show {
   vertical-align: middle;
 }
 
-nav ul li {
-  padding: 8px 0;
-}
-
-/* Ensure all header and nav buttons have same size */
-.desktop-nav li a,
-nav ul li a,
-.back-to-top {
-  width: 200px;
-  text-align: center;
-}
-
-/* Wrap desktop nav buttons if too wide */
-@media screen and (min-width: 768px) {
-  .desktop-nav {
-    flex-wrap: wrap;
-    max-width: 100%;
-    gap: 10px;
-  }
-}
 
 
 /* Unified button size for wrapping and max fit */
@@ -487,33 +308,16 @@ nav ul li a,
   text-align: center;
 }
 
-/* Hamburger menu fixed width for PC */
-@media screen and (min-width: 768px) {
-  nav ul {
-    width: 240px !important;
-  }
-}
 
 
 /* Desktop nav layout refinement */
 @media screen and (min-width: 768px) {
-  .desktop-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    max-width: 100%;
-    padding: 0 20px;
-  }
-
-  .desktop-nav li {
-    margin: 8px;
-  }
-
+ 
   .desktop-nav li a {
   padding: 6px 12px;
   font-size: 1rem;
   min-width: 120px;
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.3);
   backdrop-filter: blur(6px);
@@ -522,19 +326,15 @@ nav ul li a,
   font-weight: bold;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-}
-}
+  }
 
-/* Hamburger menu spacing fix for smaller screens */
-@media screen and (max-width: 767px) {
   nav ul {
     overflow-y: auto;
     max-height: 100vh;
     padding-bottom: 2rem;
-  }
-
-  nav ul li {
-    padding: 10px 0;
+    height: 100vh;
+    overflow-y: auto;
+    padding-bottom: 2rem;
   }
 
   nav ul li a {
@@ -543,155 +343,37 @@ nav ul li a,
   }
 }
 
-.footer-sns {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-}
-.footer-sns a {
-  margin-left: 10px;
-}
-.footer-sns img.sns-icon {
-  width: 28px;
-  height: 28px;
-  vertical-align: middle;
-}
-
-.footer-sns-alt {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  gap: 12px;
-}
-
-.footer-sns-alt a {
-  padding: 6px 12px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #002b40;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(6px);
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.footer-sns-alt a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-  transform: scale(1.05);
-}
-
-/* Stylish SNS button links in footer */
-.footer-sns-alt {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  display: flex;
-  gap: 12px;
-}
-
-.footer-sns-alt a {
-  padding: 6px 12px;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #002b40;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(6px);
-  font-size: 0.9rem;
-  transition: all 0.3s ease;
-}
-
-.footer-sns-alt a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-  transform: scale(1.05);
-}
-
-/* Modern hamburger menu font and color styling */
-nav ul li a {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.1rem;
-  color: #002b40;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-  transform: scale(1.05);
-}
-
-@media screen and (max-width: 767px) {
-  .footer-sns-alt {
-    position: static;
-    justify-content: center;
-    margin-top: 1rem;
-  }
-}
-
-.footer-sns-alt .instagram-btn {
-  background-color: #E4405F;
-  color: #fff;
-}
-.footer-sns-alt .instagram-btn:hover {
-  background-color: #d52a4e;
-}
-
-.footer-sns-alt .line-btn {
-  background-color: #00C300;
-  color: #fff;
-}
-.footer-sns-alt .line-btn:hover {
-  background-color: #00a800;
-}
-
-
-@media screen and (min-width: 768px) {
-  nav ul {
-    height: 100vh;
-    overflow-y: auto;
-    padding-bottom: 2rem;
-  }
-}
-
 
 
 .top-bar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: linear-gradient(to right, rgba(0, 43, 64, 0.85), rgba(75, 182, 212, 0.85));
+  background: linear-gradient(to right, rgba(0, 43, 64, 0.85), rgba(91, 178, 202, 0.795));
   color: white;
   z-index: 999;
   display: flex;
   justify-content: center;
   gap: 16px;
-  padding: 8px 16px;
+  padding: 8px 8px;
   font-size: 1rem;
   backdrop-filter: blur(6px);
 }
 
 
-
-
 .top-bar-btn {
   color: white;
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 0px 10px;
   border-radius: 6px;
   font-weight: bold;
   background-color: rgba(255,255,255,0.1);
   transition: background 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
+  border: 1px solid rgba(200, 200, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -699,161 +381,17 @@ nav ul li a:hover {
   background-color: rgba(255,255,255,0.3);
 }
 
-.insta-btn {
-  background-color: #E4405F;
-}
-.insta-btn:hover {
-  background-color: #d52a4e;
-}
-
-.line-btn {
-  background-color: #00C300;
-}
-.line-btn:hover {
-  background-color: #00a800;
-}
-
-/* Force override: pink hamburger dots */
-.hamburger span {
-  background: #ff69b4 !important; /* pink */
-}
-
-@media screen and (min-width: 768px) {
-  
-}
-
-@media screen and (min-width: 768px) {
-  .desktop-nav {
-    padding: 4px 10px;
-  }
-  .desktop-nav li a {
-    padding: 4px 8px;
-    font-size: 1rem;
-  }
-}
-
-/* 強調ピンクのドットに変更 & サイズ調整 */
-.hamburger span {
-  width: 12px !important;
-  height: 12px !important;
-  background: #ff69b4 !important;
-  border-radius: 50%;
-  display: block;
-}
-
-/* PC表示時のナビゲーション幅制限と中央寄せ */
-@media screen and (min-width: 768px) {
-  .desktop-nav {
-    max-width: 960px;
-    margin: 0 auto;
-    justify-content: center;
-  }
-}
-
-
-/* --- Top bar height adjustment --- */
-
-
-.top-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: linear-gradient(to right, rgba(0, 43, 64, 0.85), rgba(75, 182, 212, 0.85));
-  color: white;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  padding: 8px 16px;
-  font-size: 1rem;
-  backdrop-filter: blur(6px);
-}
-
-
-
-/* --- Hamburger fixed in top bar with background --- */
-.hamburger-wrapper {
-  position: fixed;
-  top: 4px;
-  right: 8px;
-  z-index: 1002;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
-  padding: 6px;
-  backdrop-filter: blur(6px);
-}
-
-/* --- Ensure mobile nav menu scrolls fully --- */
-nav ul {
-  height: 100vh !important;
-  overflow-y: auto !important;
-  padding-bottom: 3rem !important;
-}
-
-/* Header padding for compact height */
-
-header {
-  background: #b0e0e6;
-  padding: 6px 16px;
-  position: relative;
-}
-
-
-/* Smaller desktop nav links */
-.desktop-nav li a {
-  padding: 4px 8px;
-  font-size: 1rem;
-}
-
-/* Fix hamburger position and style */
-.hamburger-wrapper {
-  position: absolute;
-  top: 4px;
-  right: 10px;
-  z-index: 1002;
-  background-color: rgba(255, 255, 255, 0.3);
-  padding: 4px;
-  border-radius: 10px;
-  backdrop-filter: blur(6px);
-}
-
-/* Ensure mobile menu scrolls fully */
-nav ul {
-  height: 100vh;
-  overflow-y: auto;
-  padding-bottom: 3rem;
-}
-
-/* New hamburger icon style */
-.hamburger-icon {
-  font-size: 28px;
-  color: #ff69b4;
-  cursor: pointer;
-  z-index: 1001;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 6px 10px;
-  border-radius: 10px;
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.4);
-  transition: background 0.3s ease;
-}
-.hamburger-icon:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
 
 /* Adjusted hamburger icon inside top-bar */
 .hamburger-icon {
-  font-size: 24px;
+  font-size: 22px;
   color: #ff69b4;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(240, 248, 255, 0.25); /* soft blue */
-  padding: 6px 10px;
+  padding: 0px 10px;
   border-radius: 10px;
   border: 1px solid rgba(200, 200, 255, 0.4);
   transition: background 0.3s ease;
