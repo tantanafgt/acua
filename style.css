@@ -148,7 +148,7 @@ th, td {
     max-width: 100%;
     justify-content: center;
     overflow-y: auto;
-    max-height: 90vh
+    max-height: 100vh
   }
   nav ul {
   width: 20%;
