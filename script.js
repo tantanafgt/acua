@@ -2,27 +2,24 @@
 const hamburger = document.getElementById("hamburger");
 const menu = document.getElementById("menu");
 
+// ハンバーガークリックでメニュー開閉
 hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
   menu.classList.toggle("show");
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener("click", function(e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute("href"));
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
-    }
+// メニュー内リンククリック時も閉じる
+menu.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
     menu.classList.remove("show");
-    hamburger.classList.remove("active");
   });
 });
 
-document.querySelector('.back-to-top').addEventListener('click', (e) => {
-  e.preventDefault();
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+// メニュー以外クリック時にメニューを閉じる
+document.addEventListener("click", (event) => {
+  const isClickInsideMenu = menu.contains(event.target);
+  const isClickOnHamburger = hamburger.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickOnHamburger) {
+    menu.classList.remove("show");
+  }
 });
-
-// Initial check for top position on load (desktop only)
-
