@@ -382,3 +382,19 @@ nav ul li a,
 .hamburger-icon:hover {
   background-color: rgba(240, 248, 255, 0.4);
 }
+
+@media screen and (max-width: 767px) {
+  nav ul {
+    position: fixed;
+    top: 56px;
+    right: 0;
+    width: 80%;
+    height: auto;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+    z-index: 998;
+    background: linear-gradient(to top, rgba(176, 224, 230, 0.95), rgba(255, 255, 255, 0.95));
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+}
