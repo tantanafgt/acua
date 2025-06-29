@@ -58,7 +58,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #1022307d;
   font-size: 1.2rem;
 }
 
@@ -238,14 +238,17 @@ nav ul.show {
 }
 
 table.price-table {
-  border: 2px solid #2aafe8;
-  width: 40rem;
+  border: 2px solid #2aafe8;  min-width: 480px; 
+  overflow-x: auto;
+  min-width: 15rem; 
+  max-width: 40rem;
 }
+
 
 table.price-table td,
 table.price-table th {
   border: 2px solid #2aafe8;
-  width: 20rem;
+  width: 5rem;
 }
 
 ul#qualifications {
