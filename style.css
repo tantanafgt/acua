@@ -148,7 +148,6 @@ th, td {
     max-width: 100%;
     justify-content: center;
     overflow-y: auto;
-    max-height: 100vh
   }
   nav ul {
   width: 20%;
@@ -236,6 +235,21 @@ button, a, .photo-box, nav ul li a {
 
 nav ul.show {
   transform: translateX(0) !important;
+}
+
+table.price-table {
+  border: 2px solid #2aafe8;
+  width: 40rem;
+}
+
+table.price-table td,
+table.price-table th {
+  border: 2px solid #2aafe8;
+  width: 20rem;
+}
+
+ul#qualifications {
+padding-inline-start: 40px;
 }
 
 .back-to-top {
